@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "logo-variants.html",
+  "entry": "logo-variants.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-08-20T19:37:27.588Z",
+  "updatedAt": "2026-08-20T19:37:27.588Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

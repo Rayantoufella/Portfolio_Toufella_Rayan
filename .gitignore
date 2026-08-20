@@ -1,0 +1,11 @@
+# Open Design internal files
+.file-versions/
+.od-skills/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Editor files
+*.swp
+*.swo
