@@ -184,6 +184,9 @@
   @keyframes curBlink { 50% { opacity: 0; } }
   .brand .name { font-family: var(--font-display); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; }
   .brand .tag { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+  @media (max-width: 480px) {
+    .brand .tag { display: none; }
+  }
   .topnav nav { display: flex; gap: 26px; }
   .topnav nav a { font-size: 14px; color: var(--muted); position: relative; padding: 4px 0; transition: color .18s ease; }
   .topnav nav a::after {
@@ -409,6 +412,9 @@
     .proj-feat-hero { grid-template-columns: 1fr; }
     .proj-feat-hero .proj-img-wrap { min-height: 220px; }
   }
+  @media (max-width: 480px) {
+    .proj-feat-hero .proj-img-wrap { min-height: 160px; }
+  }
   /* medium cards grid */
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-md); margin-top: var(--gap-lg); }
   @media (max-width: 1100px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
@@ -590,6 +596,9 @@
   @media (max-width: 920px) {
     .proto-card .proto-visual { height: 280px; }
   }
+  @media (max-width: 480px) {
+    .proto-card .proto-visual { height: 200px; }
+  }
   /* case study modal */
   .modal-overlay {
     position: fixed; inset: 0; z-index: 200; background: rgba(7,8,12,.85);
@@ -670,7 +679,7 @@
     font-family: var(--font-mono); font-size: 13px; color: var(--muted);
     transition: background .25s ease, border-color .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
   }
-  .step-btn .lbl { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); transition: color .2s ease; }
+  .step-btn .lbl { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); transition: color .2s ease; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .step-btn:hover .dot { border-color: var(--accent-ink); transform: translateY(-2px); }
   .step-btn.active .dot { background: var(--accent); border-color: var(--accent); color: var(--on-accent); box-shadow: 0 12px 26px -12px var(--accent); }
   .step-btn.active .lbl { color: var(--fg); }
@@ -849,6 +858,9 @@
     background: radial-gradient(circle at center, color-mix(in oklch, var(--accent) 13%, transparent), transparent 65%);
     transform: translate(-50%, -50%); mix-blend-mode: screen;
     will-change: transform; transition: opacity .45s ease;
+  }
+  @media (pointer: coarse) {
+    #cursor-glow { display: none; }
   }
   #cursor-glow.on { opacity: 1; }
 
