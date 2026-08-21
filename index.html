@@ -394,7 +394,7 @@
     background: linear-gradient(90deg, var(--accent), var(--accent-teal), var(--accent-bright)); opacity: .7; z-index: 2;
   }
   .proj-feat-hero .proj-img-wrap { position: relative; overflow: hidden; min-height: 360px; }
-  .proj-feat-hero .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+  .proj-feat-hero .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: left top; transition: transform .6s cubic-bezier(.22,1,.36,1); }
   .proj-feat-hero:hover .proj-img-wrap img { transform: scale(1.05); }
   .proj-feat-hero .proj-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, var(--surface)); pointer-events: none; }
   .proj-feat-hero .proj-body { padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; justify-content: center; }
@@ -1491,7 +1491,7 @@
         </div>
         <div>
           <h4 data-i18n="pt_notice_h">Design Contribution Notice</h4>
-          <p data-i18n="pt_notice_p">The UI/UX designs and interactive prototypes shown in this section were created by <strong>Rayan Toufella</strong> as design references for projects developed by other developers. The linked GitHub repositories belong to their respective project owners.</p>
+          <p data-i18n-html="pt_notice_p">The UI/UX designs and interactive prototypes shown in this section were created by <strong>Rayan Toufella</strong> as design references for projects developed by other developers. The linked GitHub repositories belong to their respective project owners.</p>
         </div>
       </div>
       <div class="proto-grid">
