@@ -88,6 +88,7 @@
     margin: 0; background: var(--bg); color: var(--fg);
     font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.55;
     text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   img, svg { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
@@ -312,7 +313,7 @@
   .vpanel .vhead .bullets i { width: 7px; height: 7px; border-radius: 50%; display: block; background: var(--border); }
   .vpanel .vhead .bullets i:nth-child(1) { background: color-mix(in oklch, var(--accent) 55%, var(--border)); }
   .vpanel .vhead .bullets i:nth-child(2) { background: color-mix(in oklch, var(--accent-bright) 70%, var(--border)); }
-  .vpanel pre { margin: 0; padding: 11px 13px; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; color: var(--fg); overflow: hidden; }
+  .vpanel pre { margin: 0; padding: 11px 13px; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; color: var(--fg); overflow-x: auto; overflow-y: hidden; }
   .vpanel pre .c { color: var(--muted); }
   .vpanel pre .k { color: var(--accent-ink); }
   .vpanel pre .s { color: color-mix(in oklch, var(--steel) 100%, black); }
@@ -342,7 +343,10 @@
   .vchip-a { top: -16px; right: 26px; animation: floaty 6s ease-in-out infinite; }
   .vchip-b { bottom: -15px; left: 40px; animation: floaty 7s ease-in-out 1.2s infinite; }
   .vchip-c { top: 42%; right: -14px; animation: floaty 6.5s ease-in-out .6s infinite; }
-  @media (max-width: 560px) { .vchip-c { display: none; } }
+  @media (max-width: 560px) { .vchip-c { display: none; } .vchip-b { display: none; } }
+  @media (max-width: 560px) {
+    .hero-visual { grid-template-columns: 1fr; grid-template-areas: "term" "code" "json" "db"; }
+  }
   @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 
   /* ─── marquee ────────────────────────────────────────────────────── */
@@ -689,6 +693,21 @@
     .step-btn { width: 25%; }
   }
   @media (max-width: 480px) { .step-btn { width: 50%; } }
+  @media (max-width: 480px) {
+    :root { --gutter: 16px; }
+    h1 { font-size: clamp(36px, 7.2vw, 88px); }
+    .brand .name { font-size: 16px; }
+    .topnav-inner { gap: 8px; }
+    .topnav nav { padding: 10px 16px 18px; }
+    .hero-split { gap: 32px; }
+    .proj-card { padding: 18px; }
+    .cta-card { padding: clamp(28px, 5vw, 84px); }
+    .contact-panel { padding: 18px 20px; }
+    .contact-panel .c-row { flex-wrap: wrap; gap: 6px; }
+    .proto-grid { gap: 28px; }
+    .proto-card .proto-body { padding: clamp(20px, 3vw, 44px); }
+    .proto-notice { flex-wrap: wrap; padding: 16px; }
+  }
   .step-panels { margin-top: 48px; position: relative; min-height: 210px; }
   .step-panel {
     position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(14px);
