@@ -9,3 +9,9 @@ Desktop.ini
 # Editor files
 *.swp
 *.swo
+
+# Source Claude Design (prototype) — non publié
+portfolio reffactor/
+docs/
+Atlas_crowd.jpeg
+dash_atlas_crowd.jpeg
